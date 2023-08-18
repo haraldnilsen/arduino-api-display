@@ -43,6 +43,7 @@
 // include the library code:
 #include <LiquidCrystal.h>
 #include <Arduino.h>
+#include <ArduinoHttpClient.h>
 
 // initialize the library by associating any needed LCD interface pin
 // with the arduino pin number it is connected to
@@ -54,6 +55,9 @@ void setup() {
   lcd.begin(16, 2);
   // Print a message to the LCD.
   lcd.print("hello, world!");
+
+  Serial.begin(9600);       // Start the serial communication with a baud rate of 9600
+  Serial.println("Hello World");
 }
 
 void loop() {
